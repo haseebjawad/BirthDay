@@ -1,168 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Kainat</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f9f9f9;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-    }
-
-    .big-heart {
-      width: 0;
-      height: 0;
-      position: relative;
-      background-color: #ff1493;
-      transform: rotate(45deg);
-      animation: expand 3s ease-out forwards, breakApart 3s 3s forwards;
-    }
-
-    .big-heart::before, .big-heart::after {
-      content: '';
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      background-color: #ff1493;
-      border-radius: 50%;
-    }
-
-    .big-heart::before {
-      top: -50px;
-      left: 0;
-    }
-
-    .big-heart::after {
-      left: -50px;
-      top: 0;
-    }
-
-    @keyframes expand {
-      0% {
-        width: 0;
-        height: 0;
-      }
-      100% {
-        width: 150px;
-        height: 150px;
-      }
-    }
-
-    @keyframes breakApart {
-      0% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-        transform: scale(0);
-      }
-    }
-
-    .small-hearts {
-      display: none;
-      position: absolute;
-      bottom: -100px;
-      animation: floatUp 5s linear infinite;
-    }
-
-    .small-heart {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: #ff1493;
-      transform: rotate(45deg);
-      opacity: 0;
-      animation: floatHeart 3s ease-out forwards;
-    }
-
-    .small-heart::before, .small-heart::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: #ff1493;
-      border-radius: 50%;
-    }
-
-    .small-heart::before {
-      top: -10px;
-      left: 0;
-    }
-
-    .small-heart::after {
-      left: -10px;
-      top: 0;
-    }
-
-    @keyframes floatHeart {
-      0% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      100% {
-        opacity: 0;
-        transform: translateY(-500px);
-      }
-    }
-
-    .message {
-      display: none;
-      margin-top: 20px;
-      font-size: 2em;
-      color: #ff1493;
-      animation: fadeIn 3s ease-out forwards;
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @keyframes floatUp {
-      0% {
-        transform: translateY(100%);
-      }
-      100% {
-        transform: translateY(-100%);
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <div class="card">
+            <div class="outside">
+                <h1>Happy Birthday</h1>
+                <h3>My dear best friend,may god bless you with abundant joy on your birthday and always!<br>
+                    Thank you for always being by my side and having my back.</h3>
+            </div>
+            <div class="inside">
+                <img src="cakegif.gif"/>
+                <h3>Sending you an infinite amount of love, joy, and happiness on your birthday!
+                </h3>
+            </div>
+        </div>
 
-  <!-- Expanding Heart -->
-  <div class="big-heart" id="bigHeart"></div>
+        <div class="block">
+            <div class="frames frame1">
+                <img src="img1.png" alt="">
+                <p>Keep smiling,Keep shining</p>
+            </div>
+            <div class="frames frame2">
+                <img src="img2.png" alt="">
+                <p>On this occasion bring you lot of happiness and success
+                </p>
+            </div>
+            <div class="frames frame3">
+                <img src="img3.png" alt="">
+                <p>May God bless you on your birthday, and always</p>
+            </div>
+        </div>
 
-  <!-- Floating Small Hearts -->
-  <div class="small-hearts" id="smallHearts">
-    <div class="small-heart" style="left: 50px;"></div>
-    <div class="small-heart" style="left: 100px;"></div>
-    <div class="small-heart" style="left: 150px;"></div>
-    <div class="small-heart" style="left: 200px;"></div>
-    <div class="small-heart" style="left: 250px;"></div>
-  </div>
-
-  <!-- Message -->
-  <div class="message" id="message">Happy Birthday Kainat!</div>
-
-  <script>
-    // Delay the floating hearts and message after the big heart animation ends
-    setTimeout(function() {
-      document.getElementById('smallHearts').style.display = 'block';
-      document.getElementById('message').style.display = 'block';
-    }, 3000);
-  </script>
-
+    </div>
 </body>
 </html>
